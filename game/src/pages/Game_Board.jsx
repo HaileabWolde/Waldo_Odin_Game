@@ -1,9 +1,18 @@
+import got from "../assets/got.png"
+
 function Game_Board(){
  return (
-    <div className="flex h-screen items-center justify-center bg-slate-100">
-      <h1 className="text-3xl font-bold text-blue-600 underline">
-        Tailwind is Working!
-      </h1>
+    <div className="min-h-screen ">
+       <div className="min-h-screen  bg-[#faf9f7] flex flex-col items-center p-6">
+            <div 
+            className="cursor-pointer relative w-full max-w-5xl rounded-2xl overflow-hidden ">
+                <img
+                src={got}
+                alt="Game of Thrones"
+                className="w-full h-auto object-cover"
+                />
+          </div>
+       </div>
     </div>
   )
 }
