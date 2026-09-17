@@ -1,1 +1,23 @@
 @import "tailwindcss";
+body {
+  background: #071827;
+  color: #F5F0DF;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #F4C95D;
+}
+
+.panel {
+  background: #0B1F33;
+  border: 1px solid #28506D;
+  border-radius: 10px;
+}
+
+.secondary-text {
+  color: #AFC1D2;
+}
