@@ -40,7 +40,7 @@ function Game_Board(){
                     <img
                     src={Tryion2}
                     alt="tryion"
-                   className="rounded-lg w-22 "
+                   className="rounded-lg  h-22 w-auto object-contain"
                     />
                     <div>
                          <p className="text-[#F5F0DF] text-md font-semibold font-serif">Tyrion Lannister</p>
@@ -54,7 +54,7 @@ function Game_Board(){
                     <img
                     src={Varys2}
                     alt="varys"
-                    className="rounded-lg  w-22"
+                     className="rounded-lg  h-22 w-auto object-contain"
                     />
                     <div>
                         <p className="text-[#F5F0DF] text-md font-semibold font-serif">Lord Varys</p>
@@ -67,15 +67,16 @@ function Game_Board(){
                     <img
                     src={Little_Finger2 }
                     alt="littleFinger"
-                    className="rounded-lg  w-22"
+                    className="rounded-lg  h-22 w-auto object-contain"
                     />
                     <div>
                       <p className="text-[#F5F0DF] text-md font-semibold font-serif">Little Finger</p>
                     </div>
                   </div>
                 </div>
+                 
               </div>
-              
+           
          </div>
            
        </main>
