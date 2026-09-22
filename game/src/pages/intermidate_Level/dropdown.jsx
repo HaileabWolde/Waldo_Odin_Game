@@ -1,3 +1,7 @@
+import Tryion2 from "../../assets/Tryion2.png"
+import Little_Finger2 from "../../assets/Little_Finger2.png"
+import Varys2 from "../../assets/Varys2.png"
+
 function DropDown({ dropdown }) {
     // If click is past 70% from left → show dropdown to the LEFT
     const isNearRight = dropdown.left > 70
@@ -26,13 +30,31 @@ function DropDown({ dropdown }) {
                 WHO DID YOU FIND?
             </p>
             <div className="flex flex-col gap-2">
-                <button className="w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
-                    Littlefinger
+                <button 
+                className="cursor-pointer flex items-center gap-4  w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
+                   <img
+                        src={Little_Finger2 }
+                        alt="Little_Finger2 "
+                       className="rounded-lg h-10  w-auto object-contain"
+                                               />
+                 Littlefinger
                 </button>
-                <button className="w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
+                <button 
+                className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
+                  <img
+                        src={ Varys2}
+                        alt="Varys2 "
+                       className="rounded-lg h-10  w-auto object-contain"
+                    />
                     Lord Varys
                 </button>
-                <button className="w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
+                <button 
+                className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
+                  <img 
+                  src={Tryion2}
+                  alt="tryion"
+                  className="rounded-lg h-10 w-auto object-contain"
+                  />
                     Tyrion Lannister
                 </button>
             </div>
