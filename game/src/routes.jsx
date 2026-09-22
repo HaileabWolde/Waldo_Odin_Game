@@ -1,5 +1,5 @@
 //import App from "./App.jsx";
-import Game_Board from "./pages/Game_Board"
+import Game_Board from "./pages//intermidate_Level/Game_Board"
 import ErrorPage from './pages/Error_Page';
 const routes = [
   {

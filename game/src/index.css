@@ -21,3 +21,14 @@ h1 {
 .secondary-text {
   color: #AFC1D2;
 }
+@keyframes dropdownIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
