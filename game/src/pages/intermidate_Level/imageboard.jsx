@@ -5,9 +5,8 @@ import { useState, useEffect } from "react";
 
 function ImageBoard({handleImageClick, dropdown,   setDropDown}){
  
-  const [message, setMessage] = useState(null)
-  const [messageendpoint, setMessageendPoint] = useState(null)
-
+  const [foundCharacter, setFoundCharacter] = useState([])
+  
    const [error, setError] = useState(null);
    const [errorendpoint, setErrorendPoint] = useState(null)
    
@@ -63,11 +62,16 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown}){
                           </div>
                         }
                         {
-                          message &&
-                         <FoundmessageBoard
-                         message={message}
-                         messageendpoint={messageendpoint}
-                         />
+                        foundCharacter &&
+                        foundCharacter.map((character)=> {
+                          return(
+                              <FoundmessageBoard
+                          character={character}
+                            key={character.name}
+                          />
+                          )
+                          
+                        })
                         }
                         {
                           dropdown &&
@@ -77,8 +81,10 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown}){
                             setDropDown={setDropDown}
                             setError={setError}
                              setErrorendPoint={ setErrorendPoint}
+                             setFoundCharacter={setFoundCharacter}
+                             /*
                              setMessage={setMessage}
-                              setMessageendPoint={ setMessageendPoint}
+                              setMessageendPoint={ setMessageendPoint}*/
                           />
                         }
                       </div>

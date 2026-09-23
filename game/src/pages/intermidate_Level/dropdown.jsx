@@ -4,7 +4,7 @@ import Little_Finger2 from "../../assets/Little_Finger2.png"
 import Varys2 from "../../assets/Varys2.png"
 
 function DropDown({ dropdown ,   setDropDown, setError,  
-    setErrorendPoint, setMessage, setMessageendPoint}) {
+    setErrorendPoint,  setFoundCharacter}) {
    
      // If click is past 70% from left → show dropdown to the LEFT
     const isNearRight = dropdown.left > 70
@@ -17,13 +17,15 @@ function DropDown({ dropdown ,   setDropDown, setError,
            const response = await axios.post('http://localhost:3000/games/guess', {
                 x: dropdown.left,
                 y: dropdown.top,
-                charactername: e.target.textContent
+                charactername: e.currentTarget.textContent
             })
+            setFoundCharacter((prev) => [...prev, response.data.character]);
+            /*
             setMessage(response.data.message)
             setMessageendPoint({
                   top: dropdown.top,
                 left: dropdown.left
-            })
+            })*/
         }
         catch(error){
             setError(error.response.data.message)

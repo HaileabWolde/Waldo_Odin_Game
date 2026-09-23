@@ -26,7 +26,7 @@ function Game_Board(){
       left: xCoord,
     });
 
-    console.log(`Clicked at: X=${xCoord}%, Y=${yCoord}%`);
+    
    
 }
  return (
