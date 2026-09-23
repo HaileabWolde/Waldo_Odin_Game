@@ -8,7 +8,8 @@ import GameCharacter from "./game_characters"
 function Game_Board(){
   const [dropdown, setDropDown] = useState(null)
 
-  const handleImageClick = e => {
+  const handleImageClick = (e) => {
+
       const rect = e.currentTarget.getBoundingClientRect()
     
     
@@ -39,6 +40,7 @@ function Game_Board(){
              <ImageBoard
              handleImageClick={handleImageClick}
              dropdown={dropdown}
+             setDropDown={setDropDown}
              />
              <GameCharacter/> 
          </div>
