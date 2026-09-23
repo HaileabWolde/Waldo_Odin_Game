@@ -3,11 +3,9 @@ import DropDown from "./dropdown";
 import FoundmessageBoard from "./messageBoard";
 import { useState, useEffect } from "react";
 
-function ImageBoard({handleImageClick, dropdown,   setDropDown}){
+function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, setFoundCharacter}){
  
-  const [foundCharacter, setFoundCharacter] = useState([])
-  console.log(foundCharacter.length)
-  
+ 
    const [error, setError] = useState(null);
    const [errorendpoint, setErrorendPoint] = useState(null)
    
@@ -30,12 +28,12 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown}){
         <div 
                     className="  border border-[#28506D]
                         bg-[#0B1F33]
-                        shadow-2xl relative">
+                        shadow-2xl rounded-2xl overflow-hidden relative">
                         <img
                         src={got}
                         onClick={handleImageClick}
                         alt="Game of Thrones"
-                        className="rounded-2xl  aspect-16/10 w-full cursor-pointer  object-cover   hover:scale-[1.01]   transition-transform
+                        className="  aspect-16/10 w-full cursor-pointer  object-cover   hover:scale-[1.01]   transition-transform
                           duration-300"
                         />
                         {

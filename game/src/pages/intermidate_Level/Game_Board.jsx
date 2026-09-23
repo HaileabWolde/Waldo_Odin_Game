@@ -7,7 +7,9 @@ import ImageBoard from "./imageboard"
 import GameCharacter from "./game_characters"
 function Game_Board(){
   const [dropdown, setDropDown] = useState(null)
-
+   const [foundCharacter, setFoundCharacter] = useState([])
+  
+  
   const handleImageClick = (e) => {
 
       const rect = e.currentTarget.getBoundingClientRect()
@@ -31,7 +33,9 @@ function Game_Board(){
 }
  return (
     <div className="min-h-screen ">
-      <Header />
+      <Header
+      foundCharacter={foundCharacter} 
+      />
        <main 
        className="p-4 md:p-6 lg:p-8">
          <div
@@ -41,8 +45,12 @@ function Game_Board(){
              handleImageClick={handleImageClick}
              dropdown={dropdown}
              setDropDown={setDropDown}
+             foundCharacter={foundCharacter}
+             setFoundCharacter={setFoundCharacter}
              />
-             <GameCharacter/> 
+             <GameCharacter
+             foundCharacter={foundCharacter}
+             /> 
          </div>
            
        </main>

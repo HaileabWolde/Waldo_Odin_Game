@@ -2,7 +2,11 @@ import Tryion2 from "../../assets/Tryion2.png"
 import Little_Finger2 from "../../assets/Little_Finger2.png"
 import Varys2 from "../../assets/Varys2.png"
 
-function GameCharacter(){
+function GameCharacter({foundCharacter}){
+
+  const tryion_Lancestor = foundCharacter.some((character)=> character.name === "Tyrion Lannister")
+ const little_Finger = foundCharacter.some((character)=> character.name === "Little Finger")
+    const lord_Varys = foundCharacter.some((character)=> character.name === "Lord Varys")
     return (
         <div
                       className="border border-[#28506D] shadow-lg p-6  rounded-lg"
@@ -20,6 +24,13 @@ function GameCharacter(){
                             alt="tryion"
                            className="rounded-lg  h-22 w-auto object-contain"
                             />
+                            <input
+                              type="radio"
+                           // name="fruit"
+                          //value="banana"
+                          checked={tryion_Lancestor === true}
+                       // onChange={handleChange}
+                    />
                             <div>
                                  <p className="text-[#F5F0DF] text-md font-semibold font-serif">Tyrion Lannister</p>
                                   
@@ -34,6 +45,13 @@ function GameCharacter(){
                             alt="varys"
                              className="rounded-lg  h-22 w-auto object-contain"
                             />
+                              <input
+                              type="radio"
+                           // name="fruit"
+                          //value="banana"
+                          checked={lord_Varys === true}
+                       // onChange={handleChange}
+                    />
                             <div>
                                 <p className="text-[#F5F0DF] text-md font-semibold font-serif">Lord Varys</p>
                             </div>
@@ -47,6 +65,12 @@ function GameCharacter(){
                             alt="littleFinger"
                             className="rounded-lg  h-22 w-auto object-contain"
                             />
+                              <input
+                              type="radio"
+                         
+                          checked={little_Finger === true}
+                     
+                     />
                             <div>
                               <p className="text-[#F5F0DF] text-md font-semibold font-serif">Little Finger</p>
                             </div>
