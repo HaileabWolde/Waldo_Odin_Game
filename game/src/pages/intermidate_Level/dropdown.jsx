@@ -4,8 +4,13 @@ import Little_Finger2 from "../../assets/Little_Finger2.png"
 import Varys2 from "../../assets/Varys2.png"
 
 function DropDown({ dropdown ,   setDropDown, setError,  
-    setErrorendPoint,  setFoundCharacter}) {
+    setErrorendPoint,  setFoundCharacter, foundCharacter}) {
    
+    const little_Finger = foundCharacter.some((character)=> character.name === "Little Finger")
+    const lord_Varys = foundCharacter.some((character)=> character.name === "Lord Varys")
+    const tryion_Lancestor = foundCharacter.some((character)=> character.name === "Tyrion Lannister")
+
+
      // If click is past 70% from left → show dropdown to the LEFT
     const isNearRight = dropdown.left > 70
     // If click is past 75% from top → show dropdown ABOVE
@@ -54,13 +59,28 @@ function DropDown({ dropdown ,   setDropDown, setError,
                                               : 'translateY(0)',
                                       }}
         >
-            <p className="mb-3 px-2 text-xs font-bold tracking-widest text-[#F4C95D]">
-                WHO DID YOU FIND?
-            </p>
+           
+            
+                 {
+                little_Finger && lord_Varys && tryion_Lancestor ? 
+                 <p className=" px-2 text-xs font-bold tracking-widest text-[#4ade80]">
+                   Congratulations You Found <br></br>
+                   All The Hidden Characters
+                 </p>: 
+                <p className="mb-3 px-2 text-xs font-bold tracking-widest text-[#F4C95D]">
+                    WHO DID YOU FIND?
+                </p>
+            }
+                
+            
             <div className="flex flex-col gap-2">
-                <button 
+                                      {
+                                        little_Finger ? null: 
+                                        <button 
                  onClick={handleCharacter}
+                 id="Little Finger"
                 className="cursor-pointer flex items-center gap-4  w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
+                   
                    <img
                         src={Little_Finger2 }
                         alt="Little_Finger2 "
@@ -68,7 +88,12 @@ function DropDown({ dropdown ,   setDropDown, setError,
                                                />
                  <p>Little Finger</p>
                 </button>
-                <button 
+                                      }
+                
+
+                {
+                     lord_Varys ? null: 
+                     <button 
                  onClick={handleCharacter}
                 className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                   <img
@@ -78,7 +103,11 @@ function DropDown({ dropdown ,   setDropDown, setError,
                     />
                     <p>Lord Varys</p>
                 </button>
-                <button 
+                }
+                {
+                    tryion_Lancestor ? 
+                    null: 
+                     <button 
                 onClick={handleCharacter}
                 className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                   <img 
@@ -88,6 +117,8 @@ function DropDown({ dropdown ,   setDropDown, setError,
                   />
                     <p>Tyrion Lannister</p>
                 </button>
+                }
+               
             </div>
         </div>
     )
