@@ -14,7 +14,7 @@ function GameCharacter({foundCharacter}){
                         <h2 
                         className="text-lg font-semibold text-[#F5F0DF]">Find these characters</h2>
                         <div
-                        className="mt-2 flex flex-col gap-3"
+                        className="mt-2 flex flex-col gap-3 pb-8  border-b border-[#28506D]"
                         >
                           <div
                           className="flex gap-4 items-center p-2  border border-[#28506D] rounded-lg"
@@ -75,6 +75,23 @@ function GameCharacter({foundCharacter}){
                               <p className="text-[#F5F0DF] text-md font-semibold font-serif">Little Finger</p>
                             </div>
                           </div>
+                        </div>
+                        <div
+                         className="mt-2 flex flex-col gap-3"
+                        >
+                          <h2 className="text-[#F5F0DF] text-md font-semibold font-serif">Game Info</h2>
+                          <p
+                          className="text-[#F5F0DF]  text-xs font-semibold font-sans"
+                          > 3 Characters </p>
+                            <p
+                          className="text-[#F5F0DF]  text-xs font-semibold font-sans "
+                          > No Time Limit </p>
+                            <p
+                            className="text-[#F5F0DF]  text-xs font-semibold font-sans"
+                          >   Click on the character
+                          <br/>
+                            to mark them as found
+                            </p>
                         </div>
                          
                       </div>
