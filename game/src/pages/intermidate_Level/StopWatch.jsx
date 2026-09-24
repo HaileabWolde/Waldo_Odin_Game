@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-function StopWatch({foundCharacter}){
-    const [isRunning, setIsRunning] = useState(true)
-    const [elapsedTime, setElapsedTime] = useState(0)
+function StopWatch({foundCharacter,elapsedTime, setElapsedTime }){
+  const [isRunning, setIsRunning] = useState(true)
+  
     const intervalIdRef = useRef(null)
     const startTimeRef= useRef(0)
 

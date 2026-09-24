@@ -5,11 +5,12 @@ import { useState } from "react"
 import Header from "./header"
 import ImageBoard from "./imageboard"
 import GameCharacter from "./game_characters"
+import Dialog_Modal from "./dialogModal"
 function Game_Board(){
   const [dropdown, setDropDown] = useState(null)
    const [foundCharacter, setFoundCharacter] = useState([])
-  
-  
+    const [ismodalOpen, setisModalOpen]  = useState(true)
+    const [elapsedTime, setElapsedTime] = useState(0)
   const handleImageClick = (e) => {
 
       const rect = e.currentTarget.getBoundingClientRect()
@@ -32,9 +33,18 @@ function Game_Board(){
    
 }
  return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen relative">
+      {
+        foundCharacter.length === 3 &&
+        <Dialog_Modal
+        ismodalOpen={ismodalOpen}
+        elapsedTime={elapsedTime}
+        />
+      }
       <Header
       foundCharacter={foundCharacter} 
+      elapsedTime={elapsedTime}
+      setElapsedTime={setElapsedTime}
       />
        <main 
        className="p-4 md:p-6 lg:p-8">
