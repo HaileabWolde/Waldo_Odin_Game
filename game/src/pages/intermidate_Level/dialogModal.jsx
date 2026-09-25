@@ -1,8 +1,10 @@
-import { useEffect, useRef } from "react";
+import axios from "axios";
+import { useEffect, useRef, useState } from "react";
 
 function Dialog_Modal({ ismodalOpen , elapsedTime}) {
+    
     const dialogRef = useRef(null);
-
+    const [playername, setPlayerName] = useState(null)
     useEffect(() => {
         const dialog = dialogRef.current;
         if (!dialog) return;
@@ -22,6 +24,22 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
 
         return `${minutes}:${seconds}`
     }
+
+    async  function handlePlayerboard (e){
+        e.preventDefault()
+
+      try{
+        const response = await axios.post('http://localhost:3000/games/score', {
+            playername: playername,
+            time: elapsedTime,
+            diffculity: "easy"
+        })
+        console.log(response)
+      }
+      catch(error){
+        console.log("error", error)
+      }
+    }   
     return (
         <dialog
             ref={dialogRef}
@@ -37,20 +55,51 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
             <p className="mt-3 text-sm text-[#9FB3C8]">
                 You found all three characters!
             </p>
-            <h1>
-               {
-            formatTime()
-           }
-            </h1>
+            <div
+            className="mt-2 px-4 py-1 rounded-lg flex flex-col items-center border border-[#28506D]"
+            >
+                <h2
+                className="font-serif font-semibold mt-3 text-sm text-[#9FB3C8]"
+                >
+                    Your Time
+                </h2>
+                  <h1>
+                   {
+                             formatTime()
+                     }
+                 </h1>
+            </div>
+            <div
+            className="mt-4 flex flex-col items-center w-full gap-4"
+            >
+                <input 
+                id="playername" 
+                name="playername" 
+                placeholder="Enter Your Name For The leaderboard"
+                type="text" 
+                onChange={(e)=> setPlayerName(e.target.value)}
+                className="w-[80%]  border border-[#28506D] rounded-2xl px-2 py-2 text-[#9FB3C8]  placeholder-gray-500 focus:outline-none focus:border-[#54ACDB] transition"></input>
+             <button
+             onClick={handlePlayerboard}
+                className="rounded-lg
+                          bg-[#4ade80]
+                           px-5 py-2
+                           font-semibold text-[#071827]
+                           w-[80%]"
+            >
+              Sumbit to the leaderboard
+            </button>
             <button
-                className="mt-6 rounded-lg
+                className="rounded-lg
                            bg-[#F4C95D]
                            px-5 py-2
                            font-semibold text-[#071827]
-                           hover:bg-[#e8bb4f]"
+                           hover:bg-[#e8bb4f] w-[80%]"
             >
                 Next Level
             </button>
+            </div>
+              
         </dialog>
     );
 }

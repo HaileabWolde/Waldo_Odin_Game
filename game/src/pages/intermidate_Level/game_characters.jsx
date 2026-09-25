@@ -28,7 +28,7 @@ function GameCharacter({foundCharacter}){
                               type="radio"
                            // name="fruit"
                           //value="banana"
-                          checked={tryion_Lancestor === true}
+                         defaultChecked={tryion_Lancestor === true}
                        // onChange={handleChange}
                     />
                             <div>
@@ -49,7 +49,7 @@ function GameCharacter({foundCharacter}){
                               type="radio"
                            // name="fruit"
                           //value="banana"
-                          checked={lord_Varys === true}
+                          defaultChecked={lord_Varys === true}
                        // onChange={handleChange}
                     />
                             <div>
@@ -68,7 +68,7 @@ function GameCharacter({foundCharacter}){
                               <input
                               type="radio"
                          
-                          checked={little_Finger === true}
+                         defaultChecked={little_Finger === true}
                      
                      />
                             <div>
