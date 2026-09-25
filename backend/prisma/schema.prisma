@@ -11,17 +11,29 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+model Level {
+  id          Int         @id @default(autoincrement())
+  name        String      // "The Purple Wedding", "Tyrion's Trial"
+  difficulty  String      // "easy", "intermediate", "hard"
+  characters  Character[]
+  scores      Score[]
+}
+
 model Character {
   id        Int    @id @default(autoincrement())
-  name      String // "Tyrion", "Littlefinger", "Varys"
-  xPercent  Float  
-  yPercent  Float  
+  name      String
+  xPercent  Float
+  yPercent  Float
   tolerance Float  @default(3.0)
+  levelId   Int?
+  level     Level?  @relation(fields: [levelId], references: [id])
 }
 
 model Score {
   id        Int      @id @default(autoincrement())
-  name      String   
-  time      Int      
+  name      String   // player name they enter on win screen
+  time      Int      // seconds to complete
+  levelId   Int?    // which level they completed
+  level     Level?    @relation(fields: [levelId], references: [id])
   createdAt DateTime @default(now())
 }

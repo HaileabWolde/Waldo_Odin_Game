@@ -1,6 +1,7 @@
 const db = require("../db/characterDB");
 const AppError = require("../appError/AppError");
 
+
 async function checkCharacter(req, res, next) {
     const { x, y, charactername } = req.body;
 
@@ -26,7 +27,8 @@ async function checkCharacter(req, res, next) {
 
         else {
             res.json({
-                message: "You found them!"
+                message: `You found ${foundCharacter.name}!`,
+                character: foundCharacter
             });
         }
     }
