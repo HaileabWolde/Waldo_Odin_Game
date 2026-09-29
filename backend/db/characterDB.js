@@ -10,6 +10,8 @@ async function findCharacter(charactername, id){
     console.log(foundCharacter)
     return foundCharacter
 }
+
+
 module.exports = {
     findCharacter
 }

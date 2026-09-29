@@ -18,12 +18,12 @@ async function addScore(req, res, next){
 async function fetchScore(req, res, next){
     const {difficulty} = req.query
     console.log(difficulty)
-    if(difficulty){
+    if(difficulty != 'all'){
         try{
               const levelscore = await db.fetchlevelscores(difficulty)
         res.json({
             success: "true",
-            levelscore: levelscore
+            allscore: levelscore
         })
         }
         catch(error){
