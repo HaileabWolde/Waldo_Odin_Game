@@ -4,9 +4,10 @@ import Varys2 from "../../assets/base_level/Varys2.png"
 
 function GameCharacter({foundCharacter}){
 
-  const tryion_Lancestor = foundCharacter.some((character)=> character.name === "Tyrion Lannister")
- const little_Finger = foundCharacter.some((character)=> character.name === "Little Finger")
+  const little_Finger = foundCharacter.some((character)=> character.name === "Little Finger")
     const lord_Varys = foundCharacter.some((character)=> character.name === "Lord Varys")
+    const tryion_Lancestor = foundCharacter.some((character)=> character.name === "Tyrion Lannister")
+
     return (
         <div
                       className="border border-[#28506D] shadow-lg p-6  rounded-lg"
@@ -25,12 +26,10 @@ function GameCharacter({foundCharacter}){
                            className="rounded-lg  h-22 w-auto object-contain"
                             />
                             <input
-                              type="radio"
-                           // name="fruit"
-                          //value="banana"
-                         defaultChecked={tryion_Lancestor === true}
-                       // onChange={handleChange}
-                    />
+                           type="checkbox"
+                           checked={tryion_Lancestor}
+                           readOnly
+                            />
                             <div>
                                  <p className="text-[#F5F0DF] text-md font-semibold font-serif">Tyrion Lannister</p>
                                   
@@ -45,13 +44,12 @@ function GameCharacter({foundCharacter}){
                             alt="varys"
                              className="rounded-lg  h-22 w-auto object-contain"
                             />
-                              <input
-                              type="radio"
-                           // name="fruit"
-                          //value="banana"
-                          defaultChecked={lord_Varys === true}
-                       // onChange={handleChange}
-                    />
+                            <input
+                            type="checkbox"
+                            checked={lord_Varys}
+                            readOnly
+                            />
+                             
                             <div>
                                 <p className="text-[#F5F0DF] text-md font-semibold font-serif">Lord Varys</p>
                             </div>
@@ -65,12 +63,11 @@ function GameCharacter({foundCharacter}){
                             alt="littleFinger"
                             className="rounded-lg  h-22 w-auto object-contain"
                             />
-                              <input
-                              type="radio"
-                         
-                         defaultChecked={little_Finger === true}
-                     
-                     />
+                               <input
+                            type="checkbox"
+                            checked={little_Finger}
+                            readOnly
+                            />
                             <div>
                               <p className="text-[#F5F0DF] text-md font-semibold font-serif">Little Finger</p>
                             </div>
