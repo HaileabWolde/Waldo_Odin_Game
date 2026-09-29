@@ -6,7 +6,7 @@ import Header from "./header"
 import ImageBoard from "./imageboard"
 import GameCharacter from "./game_characters"
 import Dialog_Modal from "./dialogModal"
-function Game_Board_Intermidate(){
+function Game_Board_Hard(){
   const [dropdown, setDropDown] = useState(null)
    const [foundCharacter, setFoundCharacter] = useState([])
     const [ismodalOpen, setisModalOpen]  = useState(true)
@@ -29,7 +29,8 @@ function Game_Board_Intermidate(){
       left: xCoord,
     });
 
-    console.log(`${xCoord} ${yCoord}`)
+    console.log(xCoord, yCoord)
+    
    
 }
  return (
@@ -67,4 +68,4 @@ function Game_Board_Intermidate(){
     </div>
   )
 }
-export default Game_Board_Intermidate;
+export default Game_Board_Hard;

@@ -29,12 +29,12 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
         e.preventDefault()
 
       try{
-        const response = await axios.post('http://localhost:3000/games/score', {
+        await axios.post('http://localhost:3000/games/score', {
             playername: playername,
             time: elapsedTime,
-            diffculity: "intermediate"
+            diffculity: "hard"
         })
-        console.log(response)
+       
       }
       catch(error){
         console.log("error", error)
@@ -48,13 +48,10 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
                        text-[#F5F0DF]
                        shadow-2xl flex flex-col items-center"
         >
-            <h1 className="text-2xl font-serif font-bold text-[#F4C95D]">
-                Level Completed
+            <h1 className="text-2xl font-serif font-bold text-[#F4C95D] text-center">
+              Congratulations <br/>You Have <br/>Finshied The Game !!!
             </h1>
 
-            <p className="mt-3 text-sm text-[#9FB3C8]">
-                You found all three characters!
-            </p>
             <div
             className="mt-2 px-4 py-1 rounded-lg flex flex-col items-center border border-[#28506D]"
             >
@@ -90,7 +87,7 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
               Sumbit to the leaderboard
             </button>
             <Link
-            to={'/hard'}
+            to={'/'}
             
                 className="rounded-lg
                            bg-[#F4C95D]
@@ -98,7 +95,7 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
                            font-semibold text-[#071827]
                            hover:bg-[#e8bb4f] w-[80%] text-center"
             >
-                Next Level
+                Restart Game
             </Link>
             </div>
               

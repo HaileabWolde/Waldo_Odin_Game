@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {Link} from "react-router-dom"
 function Dialog_Modal({ ismodalOpen , elapsedTime}) {
-    
+    const navigate = useNavigate()
     const dialogRef = useRef(null);
     const [playername, setPlayerName] = useState(null)
     useEffect(() => {
@@ -29,12 +30,13 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
         e.preventDefault()
 
       try{
-        const response = await axios.post('http://localhost:3000/games/score', {
+         await axios.post('http://localhost:3000/games/score', {
             playername: playername,
             time: elapsedTime,
             diffculity: "easy"
         })
-        console.log(response)
+        navigate('/leaderboard')
+       
       }
       catch(error){
         console.log("error", error)

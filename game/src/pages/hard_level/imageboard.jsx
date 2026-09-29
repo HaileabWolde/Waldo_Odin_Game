@@ -1,4 +1,4 @@
-import got from "../../assets/got.png"
+import battle_of_bastard from "../../assets/Battle_OF_Bastard.png"
 import DropDown from "./dropdown";
 import FoundmessageBoard from "./messageBoard";
 import { useState, useEffect } from "react";
@@ -30,10 +30,10 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
                         bg-[#0B1F33]
                         shadow-2xl rounded-2xl overflow-hidden relative">
                         <img
-                        src={got}
+                        src={battle_of_bastard}
                         onClick={handleImageClick}
-                        alt="Game of Thrones"
-                        className="  aspect-16/10 w-full cursor-pointer  object-cover   hover:scale-[1.01]   transition-transform
+                        alt="Battle of Bastard"
+                        className=" w-full cursor-pointer  object-cover   hover:scale-[1.01]   transition-transform
                           duration-300"
                         />
                         {

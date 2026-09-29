@@ -1,15 +1,14 @@
 import axios from "axios"
-import Cersi from "../../assets/intermidate_level/Cersi_Lancister.png"
-import Jamie_Lancister from "../../assets/intermidate_level/Jamie_Lancister.png"
-import  Bron from "../../assets/intermidate_level/Sir Bron.png"
-
+import Jon_Snow from "../../assets/hard_level/Jon_Snow.png"
+import Ramsy_Bolton from "../../assets/hard_level/Ramsy_Bolton.png"
+import Lady_Melisandre from "../../assets/base_level/Varys2.png"
 
 function DropDown({ dropdown ,   setDropDown, setError,  
     setErrorendPoint,  setFoundCharacter, foundCharacter}) {
    
-    const Cersi_Lancister = foundCharacter.some((character)=> character.name === "Cersi Lancister")
-    const Sir_Bron = foundCharacter.some((character)=> character.name === "Sir Bron")
-    const JamieLancister = foundCharacter.some((character)=> character.name === "Jamie Lancister")
+    const Jonsnow = foundCharacter.some((character)=> character.name === "Jon Snow")
+    const Ramsybolton = foundCharacter.some((character)=> character.name === "Ramsy Bolton")
+    const ladyMelisandre = foundCharacter.some((character)=> character.name === "Lady Melisandre")
 
 
      // If click is past 70% from left → show dropdown to the LEFT
@@ -20,7 +19,7 @@ function DropDown({ dropdown ,   setDropDown, setError,
     async function handleCharacter  (e){
         e.preventDefault()
         try{
-           const response = await axios.post('http://localhost:3000/games/guess/2', {
+           const response = await axios.post('http://localhost:3000/games/guess/3', {
                 x: dropdown.left,
                 y: dropdown.top,
                 charactername: e.currentTarget.textContent
@@ -63,7 +62,7 @@ function DropDown({ dropdown ,   setDropDown, setError,
            
             
                  {
-              Cersi_Lancister && Sir_Bron && JamieLancister ? 
+               Jonsnow && Ramsybolton  && ladyMelisandre ? 
                  <p className=" px-2 text-xs font-bold tracking-widest text-[#4ade80]">
                    Congratulations You Found <br></br>
                    All The Hidden Characters
@@ -76,47 +75,47 @@ function DropDown({ dropdown ,   setDropDown, setError,
             
             <div className="flex flex-col gap-2">
                                       {
-                                       Sir_Bron ? null: 
+                                        Ramsybolton ? null: 
                                         <button 
                  onClick={handleCharacter}
                  id="Little Finger"
                 className="cursor-pointer flex items-center gap-4  w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                    
                    <img
-                        src={Bron }
-                        alt="Bron "
+                        src={Ramsy_Bolton}
+                        alt="Jon Snow"
                        className="rounded-lg h-10  w-auto object-contain"
                                                />
-                 <p>Sir Bron</p>
+                 <p>Ramsy Bolton</p>
                 </button>
                                       }
                 
 
                 {
-                   JamieLancister ? null: 
+                  Jonsnow ? null: 
                      <button 
                  onClick={handleCharacter}
                 className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                   <img
-                        src={Jamie_Lancister}
+                        src={Jon_Snow}
                         alt="Varys2 "
                        className="rounded-lg h-10  w-auto object-contain"
                     />
-                    <p>Jamie Lancister</p>
+                    <p>Jon Snow</p>
                 </button>
                 }
                 {
-                  Cersi_Lancister ? 
+                  ladyMelisandre? 
                     null: 
                      <button 
                 onClick={handleCharacter}
                 className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                   <img 
-                  src={Cersi}
-                  alt="Cersi"
+                  src={Lady_Melisandre}
+                  alt="tryion"
                   className="rounded-lg h-10 w-auto object-contain"
                   />
-                    <p>Cersi Lancister</p>
+                    <p>Lady Melisandre</p>
                 </button>
                 }
                

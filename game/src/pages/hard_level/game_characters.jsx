@@ -1,12 +1,12 @@
-import Tryion2 from "../../assets/base_level/Tryion2.png"
-import Little_Finger2 from "../../assets/base_level/Little_Finger2.png"
-import Varys2 from "../../assets/base_level/Varys2.png"
+import Jon_Snow from "../../assets/hard_level/Jon_Snow.png"
+import Ramsy_Bolton from "../../assets/hard_level/Ramsy_Bolton.png"
+import Lady_Melisandre  from "../../assets/base_level/Varys2.png"
 
 function GameCharacter({foundCharacter}){
 
-  const little_Finger = foundCharacter.some((character)=> character.name === "Little Finger")
-    const lord_Varys = foundCharacter.some((character)=> character.name === "Lord Varys")
-    const tryion_Lancestor = foundCharacter.some((character)=> character.name === "Tyrion Lannister")
+  const RamsyBolton= foundCharacter.some((character)=> character.name === "Ramsy Bolton")
+    const JonSnow = foundCharacter.some((character)=> character.name === "Jon Snow")
+    const LadyMelisandre = foundCharacter.some((character)=> character.name === "Lady Melisandre")
 
     return (
         <div
@@ -21,17 +21,17 @@ function GameCharacter({foundCharacter}){
                           className="flex gap-4 items-center p-2  border border-[#28506D] rounded-lg"
                           >
                             <img
-                            src={Tryion2}
+                            src={Jon_Snow }
                             alt="tryion"
                            className="rounded-lg  h-22 w-auto object-contain"
                             />
                             <input
                            type="checkbox"
-                           checked={tryion_Lancestor}
+                           checked={JonSnow}
                            readOnly
                             />
                             <div>
-                                 <p className="text-[#F5F0DF] text-md font-semibold font-serif">Tyrion Lannister</p>
+                                 <p className="text-[#F5F0DF] text-md font-semibold font-serif">Jon Snow</p>
                                   
                              </div>
         
@@ -40,18 +40,18 @@ function GameCharacter({foundCharacter}){
                           className="flex gap-4 rounded-lg items-center p-2  border border-[#28506D]"
                           >
                             <img
-                            src={Varys2}
+                            src={Lady_Melisandre }
                             alt="varys"
                              className="rounded-lg  h-22 w-auto object-contain"
                             />
                             <input
                             type="checkbox"
-                            checked={lord_Varys}
+                            checked={LadyMelisandre }
                             readOnly
                             />
                              
                             <div>
-                                <p className="text-[#F5F0DF] text-md font-semibold font-serif">Lord Varys</p>
+                                <p className="text-[#F5F0DF] text-md font-semibold font-serif">Lady Melisandre</p>
                             </div>
         
                           </div>
@@ -59,17 +59,17 @@ function GameCharacter({foundCharacter}){
                           className="flex gap-4 rounded-lg items-center p-2  border border-[#28506D]"
                           >
                             <img
-                            src={Little_Finger2 }
+                            src={Ramsy_Bolton}
                             alt="littleFinger"
                             className="rounded-lg  h-22 w-auto object-contain"
                             />
                                <input
                             type="checkbox"
-                            checked={little_Finger}
+                            checked={RamsyBolton}
                             readOnly
                             />
                             <div>
-                              <p className="text-[#F5F0DF] text-md font-semibold font-serif">Little Finger</p>
+                              <p className="text-[#F5F0DF] text-md font-semibold font-serif">Ramsy Bolton</p>
                             </div>
                           </div>
                         </div>
