@@ -4,9 +4,11 @@ const AppError = require("../appError/AppError");
 
 async function checkCharacter(req, res, next) {
     const { x, y, charactername } = req.body;
+    const {id} = req.params
+    const new_id = Number(id)
 
     try {
-        const foundCharacter = await db.findCharacter(charactername);
+        const foundCharacter = await db.findCharacter(charactername, new_id);
 
         if (!foundCharacter) {
             throw new AppError(

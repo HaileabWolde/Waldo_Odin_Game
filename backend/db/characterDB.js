@@ -1,9 +1,10 @@
 const prisma = require("../lib/prisma")
 
-async function findCharacter(charactername){
+async function findCharacter(charactername, id){
     const foundCharacter = await prisma.character.findFirst({
             where: {
-                name: charactername
+                name: charactername,
+                levelId: id
             }
     })
     console.log(foundCharacter)
