@@ -40,6 +40,7 @@ async function checkCharacter(req, res, next) {
     }
 }
 
+
 module.exports = {
-    checkCharacter
+    checkCharacter,
 };

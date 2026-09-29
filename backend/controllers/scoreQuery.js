@@ -15,4 +15,36 @@ async function addScore(req, res, next){
    }
    
 }
-module.exports = {addScore}
+async function fetchScore(req, res, next){
+    const {difficulty} = req.query
+    console.log(difficulty)
+    if(difficulty){
+        try{
+              const levelscore = await db.fetchlevelscores(difficulty)
+        res.json({
+            success: "true",
+            levelscore: levelscore
+        })
+        }
+        catch(error){
+            console.log("error", error)
+            next(error)
+        }
+      
+    }
+    else {
+        try{
+              const allscore = await db.fetchallscores()
+        res.json({
+            sucess: "true",
+            allscore: allscore
+        })
+        }
+        catch(error){
+            console.log("error", error)
+            next(error)
+        }
+      
+    }
+}
+module.exports = {addScore, fetchScore}

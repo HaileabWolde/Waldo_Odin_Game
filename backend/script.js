@@ -24,26 +24,32 @@ async function main() {
       yPercent: 83.37,
       levelId: 1
   }
- })
-  */ /*await prisma.character.createMany({
+ })*/
+await prisma.level.create({
+  data: {
+    difficulty: "hard",
+    name: "Battle of Bastards"
+  }
+})
+   await prisma.character.createMany({
     data: [
       {
-      name: "Sir Bron",
-      xPercent: 46.84,
-      yPercent: 81.07,
-        levelId: 2
+      name: "Lady Melisandre",
+      xPercent: 18.00,
+      yPercent: 4.5,
+        levelId: 3
     },
     {
-      name: "Jamie Lancister",
-      xPercent: 15.52,
-      yPercent: 38.89,
-      levelId: 2
+      name: "Jon Snow",
+      xPercent: 48.81,
+      yPercent: 51.47,
+      levelId: 3
     },
     {
-      name: "Cersi Lancister",
-      xPercent: 77.32,
-      yPercent: 17.79,
-      levelId: 2
+      name: "Ramsy Bolton",
+      xPercent: 93.47,
+      yPercent: 11.92,
+      levelId: 3
     }
   ]
    })
