@@ -1,4 +1,4 @@
-import Tryion_Trial from "../../assets/Tryion_Trial.png"
+import got from "../../assets/got.png"
 import DropDown from "./dropdown";
 import FoundmessageBoard from "./messageBoard";
 import { useState, useEffect } from "react";
@@ -30,7 +30,7 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
                         bg-[#0B1F33]
                         shadow-2xl rounded-2xl overflow-hidden relative">
                         <img
-                        src={Tryion_Trial}
+                        src={got}
                         onClick={handleImageClick}
                         alt="Game of Thrones"
                         className="  aspect-16/10 w-full cursor-pointer  object-cover   hover:scale-[1.01]   transition-transform

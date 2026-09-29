@@ -1,6 +1,6 @@
-import Tryion2 from "../../assets/intermidate_level/Cersi_Lancister.png"
-import Little_Finger2 from "../../assets/intermidate_level/Jamie_Lancister.png"
-import Varys2 from "../../assets/intermidate_level/Sir Bron.png"
+import Tryion2 from "../../assets/base_level/Tryion2.png"
+import Little_Finger2 from "../../assets/base_level/Little_Finger2.png"
+import Varys2 from "../../assets/base_level/Varys2.png"
 
 function GameCharacter({foundCharacter}){
 
