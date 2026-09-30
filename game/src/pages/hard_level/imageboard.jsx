@@ -28,7 +28,7 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
         <div 
                     className="  border border-[#28506D]
                         bg-[#0B1F33]
-                        shadow-2xl rounded-2xl overflow-hidden relative">
+                        shadow-2xl rounded-2xl relative">
                         <img
                         src={battle_of_bastard}
                         onClick={handleImageClick}

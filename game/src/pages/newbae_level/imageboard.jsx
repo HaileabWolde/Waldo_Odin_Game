@@ -26,14 +26,14 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
 
     return (
         <div 
-                    className="  border border-[#28506D]
+                    className=" 
                         bg-[#0B1F33]
-                        shadow-2xl rounded-2xl overflow-hidden relative">
+                        shadow-2xl  rounded-lg   overflow-visible relative">
                         <img
                         src={Tryion_Trial}
                         onClick={handleImageClick}
                         alt="Game of Thrones"
-                        className="  aspect-16/10 w-full cursor-pointer  object-cover   hover:scale-[1.01]   transition-transform
+                        className="rounded-lg aspect-16/10 w-full cursor-pointer  object-cover   hover:scale-[1.01]   transition-transform
                           duration-300"
                         />
                         {

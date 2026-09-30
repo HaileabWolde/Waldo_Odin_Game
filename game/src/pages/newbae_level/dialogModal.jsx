@@ -45,7 +45,7 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
     return (
         <dialog
             ref={dialogRef}
-            className="justify-self-center self-center max-w-lg w-full rounded-2xl border border-[#28506D]
+            className="justify-self-center self-center max-w-lg w-[80%] sm:w-full rounded-2xl border border-[#28506D]
                         bg-[#071827]/95 p-8
                        text-[#F5F0DF]
                        shadow-2xl flex flex-col items-center"
@@ -80,14 +80,14 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
                 placeholder="Enter Your Name For The leaderboard"
                 type="text" 
                 onChange={(e)=> setPlayerName(e.target.value)}
-                className="w-[80%]  border border-[#28506D] rounded-2xl px-2 py-2 text-[#9FB3C8]  placeholder-gray-500 focus:outline-none focus:border-[#54ACDB] transition"></input>
+                className="w-full sm:w-[80%]  border border-[#28506D] rounded-lg px-2 py-2 text-[#9FB3C8]  placeholder-gray-500 focus:outline-none focus:border-[#54ACDB] transition"></input>
              <button
              onClick={handlePlayerboard}
                 className="rounded-lg
                           bg-[#4ade80]
                            px-5 py-2
                            font-semibold text-[#071827]
-                           w-[80%]"
+                           w-full sm:w-[80%]"
             >
               Sumbit to the leaderboard
             </button>
@@ -98,7 +98,7 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
                            bg-[#F4C95D]
                            px-5 py-2
                            font-semibold text-[#071827]
-                           hover:bg-[#e8bb4f] w-[80%] text-center"
+                           hover:bg-[#e8bb4f] w-full sm:w-[80%] text-center"
             >
                 Next Level
             </Link>

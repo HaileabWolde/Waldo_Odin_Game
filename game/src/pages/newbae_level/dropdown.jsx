@@ -13,9 +13,9 @@ function DropDown({ dropdown ,   setDropDown, setError,
 
 
      // If click is past 70% from left → show dropdown to the LEFT
-    const isNearRight = dropdown.left > 70
+    const isNearRight = dropdown.left > 50
     // If click is past 75% from top → show dropdown ABOVE
-    const isNearBottom = dropdown.top > 60
+   const isNearBottom = dropdown.top > 70
 
     async function handleCharacter  (e){
         e.preventDefault()
@@ -44,7 +44,7 @@ function DropDown({ dropdown ,   setDropDown, setError,
     }
     return (
         <div
-            className="absolute z-50 min-w-[210px] rounded-xl border border-[#28506D] bg-[#071827]/95 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.5)] p-3 animate-[dropdownIn_180ms_ease-out]"
+            className="absolute  z-50 min-w-[210px] rounded-xl border border-[#28506D] bg-[#071827]/95 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.5)] p-3 animate-[dropdownIn_180ms_ease-out]"
              style={{
                     top: isNearBottom 
                                 ? `${dropdown.top}%` 

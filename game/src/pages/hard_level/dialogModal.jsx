@@ -1,8 +1,9 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import {Link} from "react-router-dom"
 function Dialog_Modal({ ismodalOpen , elapsedTime}) {
-    
+    const navigate = useNavigate()
     const dialogRef = useRef(null);
     const [playername, setPlayerName] = useState(null)
     useEffect(() => {
@@ -34,6 +35,7 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
             time: elapsedTime,
             diffculity: "hard"
         })
+        navigate('/leaderboard')
        
       }
       catch(error){
@@ -43,8 +45,8 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
     return (
         <dialog
             ref={dialogRef}
-            className="justify-self-center self-center max-w-lg w-full rounded-2xl border border-[#28506D]
-                        bg-[#071827]/95 p-8
+            className="justify-self-center self-center max-w-lg w-[80%] sm:w-full rounded-2xl border border-[#28506D]
+                        bg-[#071827]/95 p-4 sm:p-8
                        text-[#F5F0DF]
                        shadow-2xl flex flex-col items-center"
         >
@@ -52,27 +54,22 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
               Congratulations <br/>You Have <br/>Finshied The Game !!!
             </h1>
 
-            <div
-            className="mt-2 px-4 py-1 rounded-lg flex flex-col items-center border border-[#28506D]"
-            >
-                <h2
-                className="font-serif font-semibold mt-3 text-sm text-[#9FB3C8]"
-                >
-                    Your Time
-                </h2>
-                  <h1>
-                   {
-                             formatTime()
-                     }
-                 </h1>
+            <div className="mt-4 px-8 py-4 rounded-xl border border-[#c9a84c]/40 bg-[#c9a84c]/5 flex flex-col items-center">
+                  <h2 className="font-serif font-semibold text-sm text-[#9FB3C8]">
+                            YOUR TIME
+                         </h2>
+
+                      <h1 className="text-4xl font-bold font-mono text-[#c9a84c] mt-1">
+                                  {formatTime()}
+                         </h1>
             </div>
             <div
             className="mt-4 flex flex-col items-center w-full gap-4"
             >
                 <input 
-                id="playername" 
                 name="playername" 
-                placeholder="Enter Your Name For The leaderboard"
+              placeholder="Enter your name"
+                maxLength={20}
                 type="text" 
                 onChange={(e)=> setPlayerName(e.target.value)}
                 className="w-[80%]  border border-[#28506D] rounded-2xl px-2 py-2 text-[#9FB3C8]  placeholder-gray-500 focus:outline-none focus:border-[#54ACDB] transition"></input>

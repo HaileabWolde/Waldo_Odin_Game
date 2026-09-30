@@ -1,8 +1,10 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import {Link} from "react-router-dom"
 function Dialog_Modal({ ismodalOpen , elapsedTime}) {
-    
+    const navigate = useNavigate()
+
     const dialogRef = useRef(null);
     const [playername, setPlayerName] = useState(null)
     useEffect(() => {
@@ -29,12 +31,12 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
         e.preventDefault()
 
       try{
-        const response = await axios.post('http://localhost:3000/games/score', {
+        await axios.post('http://localhost:3000/games/score', {
             playername: playername,
             time: elapsedTime,
             diffculity: "intermediate"
         })
-        console.log(response)
+         navigate('/leaderboard')
       }
       catch(error){
         console.log("error", error)
@@ -43,7 +45,7 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
     return (
         <dialog
             ref={dialogRef}
-            className="justify-self-center self-center max-w-lg w-full rounded-2xl border border-[#28506D]
+            className="justify-self-center self-center max-w-lg w-[80%] sm:w-full rounded-2xl border border-[#28506D]
                         bg-[#071827]/95 p-8
                        text-[#F5F0DF]
                        shadow-2xl flex flex-col items-center"

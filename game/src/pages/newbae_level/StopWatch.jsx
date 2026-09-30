@@ -42,7 +42,7 @@ function StopWatch({foundCharacter,elapsedTime, setElapsedTime }){
     }
     return(
         <div
-        className="flex flex-col  justify-center rounded-lg items-center px-12  py-2 border border-[#28506D] "
+        className="flex flex-col  justify-center rounded-lg items-center px-4 md:px-12  py-2 border border-[#28506D] "
         >
            {
             formatTime()

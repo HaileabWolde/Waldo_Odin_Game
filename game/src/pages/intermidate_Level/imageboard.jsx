@@ -10,7 +10,7 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
    const [errorendpoint, setErrorendPoint] = useState(null)
    
      // If click is past 70% from left → show dropdown to the LEFT
-    const isNearRight = errorendpoint?.left > 70
+    const isNearRight = errorendpoint?.left > 50
     // If click is past 75% from top → show dropdown ABOVE
     const isNearBottom = errorendpoint?.top > 60
 
@@ -28,7 +28,7 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
         <div 
                     className="  border border-[#28506D]
                         bg-[#0B1F33]
-                        shadow-2xl rounded-2xl overflow-hidden relative">
+                        shadow-2xl rounded-2xl  relative">
                         <img
                         src={got}
                         onClick={handleImageClick}
