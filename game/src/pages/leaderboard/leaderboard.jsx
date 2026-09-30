@@ -13,7 +13,7 @@ function Leaderboard() {
         async function fetchallscore() {
             try {
                 const response = await axios.get(
-                    `http://localhost:3000/games/leaderboard?difficulty=${difficulty}`
+                    `https://waldo-odin-game.onrender.com/games/leaderboard?difficulty=${difficulty}`
                 )
 
                 setScore(response.data.allscore)

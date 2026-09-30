@@ -30,7 +30,7 @@ function Dialog_Modal({ ismodalOpen , elapsedTime}) {
         e.preventDefault()
 
       try{
-         await axios.post('http://localhost:3000/games/score', {
+         await axios.post('https://waldo-odin-game.onrender.com/games/score', {
             playername: playername,
             time: elapsedTime,
             diffculity: "easy"

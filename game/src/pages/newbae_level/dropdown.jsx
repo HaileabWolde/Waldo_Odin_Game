@@ -20,7 +20,7 @@ function DropDown({ dropdown ,   setDropDown, setError,
     async function handleCharacter  (e){
         e.preventDefault()
         try{
-           const response = await axios.post('http://localhost:3000/games/guess/2', {
+           const response = await axios.post('https://waldo-odin-game.onrender.com/games/guess/2', {
                 x: dropdown.left,
                 y: dropdown.top,
                 charactername: e.currentTarget.textContent
