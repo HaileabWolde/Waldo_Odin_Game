@@ -1,9 +1,9 @@
 //import App from "./App.jsx";
-import Game_Board from "./pages/intermidate_level/Game_Board"
-import Game_Board_Intermidate from "./pages/newbae_level/Game_Board";
-import Game_Board_Hard from "./pages/hard_level/Game_Board"
-import LeaderBoard  from "./pages/leaderboard/leaderboard"
-import ErrorPage from './pages/Error_Page';
+import Game_Board from "./pages/intermidate_level/Game_Board.jsx"
+import Game_Board_Intermidate from "./pages/newbae_level/Game_Board.jsx";
+import Game_Board_Hard from "./pages/hard_level/Game_Board.jsx"
+import LeaderBoard  from "./pages/leaderboard/leaderboard.jsx"
+import ErrorPage from './pages/Error_Page.jsx';
 const routes = [
   {
    path: "/", 

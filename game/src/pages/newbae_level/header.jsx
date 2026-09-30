@@ -1,4 +1,4 @@
-import StopWatch from "./StopWatch";
+import StopWatch from "./StopWatch.jsx";
 function Header({foundCharacter, elapsedTime, setElapsedTime}){
     return (
         <header

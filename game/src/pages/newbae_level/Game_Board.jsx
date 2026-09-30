@@ -2,10 +2,10 @@ import { useState } from "react"
 
 
 // modules
-import Header from "./header"
-import ImageBoard from "./imageboard"
-import GameCharacter from "./game_characters"
-import Dialog_Modal from "./dialogModal"
+import Header from "./header.jsx"
+import ImageBoard from "./imageboard.jsx"
+import GameCharacter from "./game_characters.jsx"
+import Dialog_Modal from "./dialogModal.jsx"
 function Game_Board_Intermidate(){
   const [dropdown, setDropDown] = useState(null)
    const [foundCharacter, setFoundCharacter] = useState([])

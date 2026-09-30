@@ -1,6 +1,6 @@
 import Tryion_Trial from "../../assets/Tryion_Trial.png"
-import DropDown from "./dropdown";
-import FoundmessageBoard from "./messageBoard";
+import DropDown from "./dropdown.jsx";
+import FoundmessageBoard from "./messageBoard.jsx";
 import { useState, useEffect } from "react";
 
 function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, setFoundCharacter}){
