@@ -55,7 +55,7 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
                                               : 'translateY(0)',
                                       }}
                           >
-                            <p className="text-red-400 text-sm  bg-red-400/10 px-3 py-2 rounded-lg">
+                            <p className="text-red-400 text-sm font-serif bg-red-400/10 px-3 py-2 rounded-lg">
                                   {error}
                              </p>
                           </div>
