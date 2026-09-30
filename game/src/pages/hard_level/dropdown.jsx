@@ -1,7 +1,7 @@
 import axios from "axios"
 import Jon_Snow from "../../assets/hard_level/Jon_Snow.png"
 import Ramsy_Bolton from "../../assets/hard_level/Ramsy_Bolton.png"
-import Lady_Melisandre from "../../assets/base_level/Varys2.png"
+import Lady_Melisandre from "../../assets/hard_level/Melisandre.png"
 
 function DropDown({ dropdown ,   setDropDown, setError,  
     setErrorendPoint,  setFoundCharacter, foundCharacter}) {
