@@ -82,9 +82,6 @@ function ImageBoard({handleImageClick, dropdown,   setDropDown, foundCharacter, 
                              setErrorendPoint={ setErrorendPoint}
                              setFoundCharacter={setFoundCharacter}
                              foundCharacter={foundCharacter}
-                             /*
-                             setMessage={setMessage}
-                              setMessageendPoint={ setMessageendPoint}*/
                           />
                         }
                       </div>

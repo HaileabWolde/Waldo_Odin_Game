@@ -78,7 +78,6 @@ function DropDown({ dropdown ,   setDropDown, setError,
                                         Ramsybolton ? null: 
                                         <button 
                  onClick={handleCharacter}
-                 id="Little Finger"
                 className="cursor-pointer flex items-center gap-4  w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                    
                    <img
@@ -98,7 +97,7 @@ function DropDown({ dropdown ,   setDropDown, setError,
                 className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                   <img
                         src={Jon_Snow}
-                        alt="Varys2 "
+                        alt="Jon Snow"
                        className="rounded-lg h-10  w-auto object-contain"
                     />
                     <p>Jon Snow</p>
@@ -112,7 +111,7 @@ function DropDown({ dropdown ,   setDropDown, setError,
                 className="cursor-pointer flex items-center gap-4 w-full rounded-lg border border-[#28506D] bg-[#0B1F33] px-3 py-2 text-left text-sm font-semibold text-[#F5F0DF] transition-all duration-150 hover:border-[#F4C95D] hover:bg-[#132D46] hover:text-[#F4C95D] hover:translate-x-1 active:scale-[0.98]">
                   <img 
                   src={Lady_Melisandre}
-                  alt="tryion"
+                  alt="Lady Melisandre"
                   className="rounded-lg h-10 w-auto object-contain"
                   />
                     <p>Lady Melisandre</p>

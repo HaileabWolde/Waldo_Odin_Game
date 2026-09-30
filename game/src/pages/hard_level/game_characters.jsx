@@ -22,7 +22,7 @@ function GameCharacter({foundCharacter}){
                           >
                             <img
                             src={Jon_Snow }
-                            alt="tryion"
+                            alt="jon snow"
                            className="rounded-lg  h-22 w-auto object-contain"
                             />
                             <input
@@ -41,7 +41,7 @@ function GameCharacter({foundCharacter}){
                           >
                             <img
                             src={Lady_Melisandre }
-                            alt="varys"
+                            alt="lady melisanre"
                              className="rounded-lg  h-22 w-auto object-contain"
                             />
                             <input
@@ -60,7 +60,7 @@ function GameCharacter({foundCharacter}){
                           >
                             <img
                             src={Ramsy_Bolton}
-                            alt="littleFinger"
+                            alt="ramsy bolton"
                             className="rounded-lg  h-22 w-auto object-contain"
                             />
                                <input
