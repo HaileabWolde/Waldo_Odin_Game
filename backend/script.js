@@ -25,14 +25,63 @@ async function main() {
       levelId: 1
   }
  })*/
-await prisma.level.create({
-  data: {
-    difficulty: "hard",
-    name: "Battle of Bastards"
-  }
+await prisma.level.createMany({
+  data: [
+     {
+        name: "The Purple Wedding",
+        difficulty: "easy"
+      },
+      {
+        name: "Tyrion's Trial",
+        difficulty: "intermediate"
+      },
+    {
+        difficulty: "hard",
+        name: "Battle of Bastards"
+    }
+   
+  ]
+   
+  
 })
    await prisma.character.createMany({
     data: [
+      {
+    name: "Lord Varys",
+     xPercent: 48.81,
+      yPercent: 83.37,
+      levelId: 1
+  },
+  {
+    name: "Little Finger",
+    xPercent: 78.4,
+    yPercent: 10.88,
+     levelId: 1
+  },
+  {
+    name: "Tyrion Lannister",
+    xPercent: 12.22,
+    yPercent: 34.92,
+     levelId: 1
+  },
+  {
+    name: "Sir Bron",
+    xPercent: 46.84,
+    yPercent: 81.07,
+    levelId: 2
+  },
+  {
+    name: "Jamie Lancister",
+    xPercent: 15.52,
+    yPercent: 38.89,
+    levelId: 2
+  },
+  {
+    name: "Cersi Lancister",
+    xPercent: 77.32,
+    yPercent: 17.79,
+    levelId: 2
+  },
       {
       name: "Lady Melisandre",
       xPercent: 18.00,
