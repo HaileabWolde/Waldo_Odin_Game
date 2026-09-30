@@ -1,5 +1,5 @@
 //import App from "./App.jsx";
-import Game_Board from "./pages/intermidate_level/Game_Board.jsx"
+import Game_Board from "./pages/intermidate_Level/Game_Board.jsx"
 import Game_Board_Intermidate from "./pages/newbae_level/Game_Board.jsx";
 import Game_Board_Hard from "./pages/hard_level/Game_Board.jsx"
 import LeaderBoard  from "./pages/leaderboard/leaderboard.jsx"
